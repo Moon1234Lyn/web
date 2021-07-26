@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申报企业基本信息</title>
+    <link rel="stylesheet" href="../css/shenbao.css"/>
+    <link rel="stylesheet" href="../css/qydy1.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-validate.js"></script>
+</head>
+<body>
+<div class="box1">
+    <div class="banner1">
+        <div class="banner1-2">
+            <img class="logo1"></img>
+            <p class="logo-test">欢迎，中国信通院</p>
+        </div>
+    </div>
+    <div class="banner2"></div>
+    <div class="banner3"></div>
+    <div class="content">
+        <div class="info1">
+            <ul class="step">
+                <ul class="data action">
+                    <li>1</li>
+                    <li>申报企业基本信息</li>
+                </ul>
+                <ul class="data presentation">
+                    <li>2</li>
+                    <li>申报二级节点应用信息</li>
+                </ul>
+                <ul class="data presentation">
+                    <li>3</li>
+                    <li>5G+工业互联网应用</li>
+                </ul>
+            </ul>
+            <form id="inforForm" name='inforForm' action='' method='post'>
+                <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>企业名称</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入企业名称" name="enterpriseName" id="enterpriseName"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>所在地</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入所在地" name="province" id="province"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>所属行业</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入所属行业" name="industry" id="industry"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>统一社会信用代码</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入统一社会信用代码" name="generalCreditCode" id="generalCreditCode"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>成立时间</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入成立时间" name="foundationDate" id="foundationDate"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>企业地址</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="*请输入企业地址" name="enterpriseAddress" id="enterpriseAddress"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>联系人姓名</span>
+                   </div>
+                   <input placeholder='请输入联系人姓名' class='dyInput required' data-valid="isNonEmpty" data-error="*请输入联系人姓名" name="contactName" id="contactName"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>
+                       <span style='color:#444444'>联系人电话</span>
+                   </div>
+                   <input placeholder='请输入联系人电话' class='dyInput' data-valid="isNonEmpty" data-error="*请输入联系人电话" name="contactPhone" id="contactPhone"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>联系人职务</span>
+                   </div>
+                   <input placeholder='请输入联系人职务' class='dyInput required' data-valid="isNonEmpty" data-error="*请输入联系人职务" name="contactJob" id="contactJob"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>联系人手机</span>
+                   </div>
+                   <input placeholder='请输入联系人手机' class='dyInput required' data-valid="isNonEmpty||isMobile" data-error="*请输入联系电话||*请输入正确的联系电话" name="contactMobile" id="contactMobile"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>
+                       <span style='color:#444444'>联系人传真</span>
+                   </div>
+                   <input placeholder='请输入联系人传真' class='dyInput' data-valid="isNonEmpty" data-error="*请输入联系人传真" name="contactFax" id="contactFax"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>联系人Email</span>
+                   </div>
+                   <input placeholder='请输入联系人Email' class='dyInput required' data-valid="isNonEmpty" data-error="*请输入联系人Email" name="contactEmail" id="contactEmail"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>企业性质</span>
+                   </div>
+                   <input disabled class='dyInput' data-valid="isNonEmpty" data-error="请输入企业性质" name="enterpriseType" id="enterpriseType"/>
+               </div>
+               <div class='inputWrapper'>
+                   <div class='dyname'>*
+                       <span style='color:#444444'>单位简介</span>
+                   </div>
+                   <textarea maxlength="500" placeholder='请输入单位简介（500字以内）' class='required' data-valid="isNonEmpty" data-error="请输入单位简介" onkeyup="callText('enterpriseIntroduction')" name="enterpriseIntroduction" id="enterpriseIntroduction"></textarea>
+                   <p class="textBox"><span class="textNum">0</span>/500</p>
+               </div>
+               <div class="btn-wrap">
+                <input type="button" value="返回" onClick="goBack()"></input>
+                <input type="button" value="下一步"  onClick="subMit()"></input>
+           </div>
+           </form>
+        </div>
+    </div>
+</div>
+<script>
+  $('form').validate({
+    onFocus: function() {
+      this.parent().addClass('active');
+      return false;
+    },
+    onBlur: function() {
+      var $parent = this.parent();
+      var _status = parseInt(this.attr('data-status'));
+      $parent.removeClass('active');
+      if (!_status) {
+        $parent.addClass('error');
+      }
+      return false;
+    }
+  });
+  function subMit(){
+     if($('form').validate('submitValidate')){
+        console.log($('form').validate('submitValidate'));
+         window.location.href = 'shenbao2.html?type==1';
+	}else{
+		 console.log($('.error:first').offset().top);
+		var oPosition = $('.error:first').offset().top;
+		$('html,body').animate({
+      		scrollTop:oPosition
+      	},10)
+	 }
+}
+function goBack(){  
+    window.location.href = 'index.html';       
+}
+</script>
+</body>
+</html>

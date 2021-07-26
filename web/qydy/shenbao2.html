@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申报企业基本信息</title>
+    <link rel="stylesheet" href="../css/shenbao2.css"/>
+    <link rel="stylesheet" href="../css/qydy1.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-validate.js"></script>
+</head>
+<body>
+    <!--弹窗-->
+	<div class="popWrap">
+		<div class="popCont">
+			<div class="popTitle">
+				<span id="popClose"></span>
+			</div>
+			<div class="popBody">
+				您是否为运营商？
+			</div>
+			<div class="popBtn">
+				<button type="button" id="yys">是</button>
+				<button type="button" id="bsyys">否</button>
+			</div>
+		</div>
+	</div>
+<div class="box1">
+    <div class="banner1">
+        <div class="banner1-2">
+            <img class="logo1"></img>
+            <p class="logo-test">欢迎，中国信通院</p>
+        </div>
+    </div>
+    <div class="banner2"></div>
+    <div class="banner3"></div>
+    <div class="content">
+        <div class="info1">
+            <ul class="step">
+                <ul class="data done">
+                    <li><img class="dui"></img></li>
+                    <li>申报企业基本信息</li>
+                </ul>
+                <ul class="data action" >
+                    <li>2</li>
+                    <li>申报二级节点应用信息</li>
+                </ul>
+                <ul class="data presentation">
+                    <li>3</li>
+                    <li>5G+工业互联网应用</li>
+                </ul>
+            </ul>
+            <form id="inforForm" name='inforForm' action='' method='post'>
+                <div class='inputWrapper'>
+                    <div class='dyname'>*
+                        <span style='color:#444444'>申报行业</span>
+                    </div>
+                    <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                        <label><input type="checkbox" name="declareIndustryList" value="汽车">汽车</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="高端设备">高端设备</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="航天装备">航天装备</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="机械制造">机械制造</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="建筑建材">建筑建材</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="新能源">新能源</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="高端面板">高端面板</label></br>
+                        <label><input type="checkbox" name="declareIndustryList" value="电子信息">电子信息</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="食品加工">食品加工</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="光纤通讯">光纤通讯</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="综合行业">综合行业</label>
+                        <label><input type="checkbox" name="declareIndustryList" value="其他">其他<input class="qtInpt" type="text" name="declareIndustryOther"></label>
+                    </div>
+                </div>
+                <div class='inputWrapper'>
+                    <div class='dyname'>*
+                        <span style='color:#444444'>应用模式</span>
+                    </div>
+                    <div class="labelBox yyms required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                        <label><input type="checkbox" name="applicationModeList" value="供应链协同管理">供应链协同管理</label>
+                        <label><input type="checkbox" name="applicationModeList" value="产品全生命周期管理">产品全生命周期管理</label>
+                        <label><input type="checkbox" name="applicationModeList" value="产品防伪追溯">产品防伪追溯</label>
+                        <label><input type="checkbox" name="applicationModeList" value="数据服务">数据服务</label>
+                        <label><input type="checkbox" name="applicationModeList" value="工业协同生产">工业协同生产</label></br>
+                        <label><input type="checkbox" name="applicationModeList" value="其他">其他<input class="qtInpt" type="text" name="applicationModeOther"></label>
+                    </div>
+                </div>
+                <p class="titleBtn" id="zBtn1">
+                    应用需求痛点描述<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>收起 -</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>现有信息系统架构情况是怎样的？是否有工业互联网平台，现状如何？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入"  onkeyup="callText('currentSystem')" name="currentSystem"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>平台/系统为企业自身/客户提供哪些管理服务？</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="systemProvideServiceList" value="采购平台">采购平台</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="生产制造">生产制造</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="包装">包装</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="库存管理">库存管理</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="订单管理">订单管理</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="发货/物流管理">发货/物流管理</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="售后管理">售后管理</label></br>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="客户管理">客户管理</label>
+                            <label><input type="checkbox" name="systemProvideServiceList" value="其他">其他<input class="qtInpt" type="text" name="systemProvideServiceOther"></label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>详述平台/系统为企业自身/客户提供的管理服务流程</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('systemProvideServiceFlow')" name="systemProvideServiceFlow"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>企业自身/客户在哪些具体应用场景或环节使用标识和解析服务？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('useIdentityAnalysis')" name="useIdentityAnalysis"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>目前这些环节标识使用情况怎样的？每个环节需要关联哪些信息？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('relationInfo')" name="relationInfo"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>这些信息来源：</span>
+                            <div class="radioBox required" data-valid="isChecked" data-error="*必选项" data-type="radio">
+                                <label><input type="radio" name="infoSource" value="独立系统" checked>独立系统</label>
+                                <label><input type="radio" name="infoSource" value="多系统组合提供">多系统组合提供</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>标识是否统一并可进行解析：</span>
+                            <div class="radioBox required" data-valid="isChecked" data-error="*必选项" data-type="radio">
+                                <label><input type="radio" name="isUnified" value="true" checked>是</label>
+                                <label><input type="radio" name="isUnified" value="false" >否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>上述场景环节在统一标识解析后，能给客户带来什么好处？可优化现有系统哪些应用场景或环节？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('provideBenefit')" name="provideBenefit"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>如果建立一套完备的数字标识的管理、运营体系，公司认为需要哪些工作? </span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('needWork')" name="needWork"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="titleBtn">
+                    业务应用方案简述<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>展开 +</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>现有系统标识对象</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="currentIdentityObjectList" value="设备">设备</label>
+                            <label><input type="checkbox" name="currentIdentityObjectList" value="零部件">零部件</label>
+                            <label><input type="checkbox" name="currentIdentityObjectList" value="产品">产品</label>
+                            <label><input type="checkbox" name="currentIdentityObjectList" value="虚拟标识（如工艺、算法、食品等）">虚拟标识（如工艺、算法、食品等）</label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>系统在什么场景或环节使用标识？</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="useCaseList" value="产品追溯">产品追溯</label>
+                            <label><input type="checkbox" name="useCaseList" value="厂内仓储物流">厂内仓储物流</label>
+                            <label><input type="checkbox" name="useCaseList" value="供应链管理">供应链管理</label>
+                            <label><input type="checkbox" name="useCaseList" value="生产协同">生产协同</label>
+                            <label><input type="checkbox" name="useCaseList" value="全生命周期">全生命周期</label>
+                            <label><input type="checkbox" name="useCaseList" value="数据营销">数据营销</label></br>
+                            <label><input type="checkbox" name="useCaseList" value="其他">其他<input class="qtInpt" type="text" name="userCaseOther"></label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>在每个环节如何使用标识？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('howUse')" name="howUse"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>系统中的标识解析应用为哪些客户服务（企业还是个人）？是否为该客户的刚性需求？应用频率如何</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('serviceObject')" name="serviceObject"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>现有编码规范是什么？</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="codeStandardList" value="企业内编码" name="codeStandard">企业内编码</label>
+                            <label><input type="checkbox" name="codeStandardList" value="GSI" name="codeStandard">GSI</label>
+                            <label><input type="checkbox" name="codeStandardList" value="OID" name="codeStandard">OID</label>
+                            <label><input type="checkbox" name="codeStandardList" value="其他" name="codeStandard">其他<input class="qtInpt" type="text" name="codeStandardOther"></label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>编码规范描述(分段/含义/位数等)</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('codeStandardDescription')" name="codeStandardDescription"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>编码应用载体</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="codeCarrierList" value="条码">条码</label>
+                            <label><input type="checkbox" name="codeCarrierList" value="二维码">二维码</label>
+                            <label><input type="checkbox" name="codeCarrierList" value="RFID标签">RFID标签</label>
+                            <label><input type="checkbox" name="codeCarrierList" value="传感器">传感器</label>
+                            <label><input type="checkbox" name="codeCarrierList" value="其他">其他<input class="qtInpt" type="text" name="codeCarrierOther"></label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>各场景如何进行赋码</span>
+                        </div>
+                        <div class="labelBox required" data-valid="isChecked" data-error="*至少选择一项" data-type="checkbox">
+                            <label><input type="checkbox" name="howCreateList" value="喷码">喷码</label>
+                            <label><input type="checkbox" name="howCreateList" value="激光">激光</label>
+                            <label><input type="checkbox" name="howCreateList" value="不干胶">不干胶</label>
+                            <label><input type="checkbox" name="howCreateList" value="铭牌">铭牌</label>
+                            <label><input type="checkbox" name="howCreateList" value="其他">其他<input class="qtInpt" type="text" name="howCreateOther"></label>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>编码关联哪些信息？ 如何进行解析？解析哪些信息？是否有关联信息需要对接其他系统？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('codeRelatedInfo')" name="codeRelatedInfo"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>企业接入系统如何进行注册？提供哪些信息？如何审批？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('howRegister')" name="howRegister"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>系统如何为企业进行编码分配（编码生成和分配方案）？这些数字标识采用什么编码标准?是否有相关行业的国家标 准或者国际标准?</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('generateScheme')" name="generateScheme"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>系统需要企业同步回传哪些数据？这些数据在哪些应用场景下使用？这些数字标识能否公开查询？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('syncData')" name="syncData"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="titleBtn">
+                    节点应用发展目标<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>展开 +</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>企业注册数量</span>
+                            <div class="inuptGroup">
+                                <span><input type="text" placeholder="2020年注册数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="enterpriseRegisterCountList" id="enterpriseRegisterCount1"/></span>
+                                <span><input type="text" placeholder="2021年注册数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="enterpriseRegisterCountList" id="enterpriseRegisterCount2"/></span>
+                                <span><input type="text" placeholder="2022年注册数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="enterpriseRegisterCountList" id="enterpriseRegisterCount3"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>标识分配数量</span>
+                            <div class="inuptGroup">
+                                <span><input type="text" placeholder="2020年标识分配数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="identityCountList" id="identityCount1"/></span>
+                                <span><input type="text" placeholder="2021年标识分配数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="identityCountList" id="identityCount2"/></span>
+                                <span><input type="text" placeholder="2022年标识分配数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="identityCountList" id="identityCount3"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>应用解析数量</span>
+                            <div class="inuptGroup">
+                                <span><input type="text" placeholder="2020年应用解析数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="applicationCountList" id="applicationCount1"/></span>
+                                <span><input type="text" placeholder="2021年应用解析数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="applicationCountList" id="applicationCount2"/></span>
+                                <span><input type="text" placeholder="2022年应用解析数量目标" class='required' data-valid="isNonEmpty" data-error="*请输入" name="applicationCountList" id="applicationCount3"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>节点应用提供哪些服务？哪些是基础服务，哪些是增值服务？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('nodeService')" name="nodeService"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>节点应用服务成本测算？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('nodeCost')" name="nodeCost"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>节点运营的商业模式？</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('nodeBusinessMode')" name="nodeBusinessMode"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>节点应用如何推广？如何进行盈利初步分析</span>
+                            <div class="areaBox">
+                                <textarea maxlength="500" placeholder="请输入（500字以内）" class='required' data-valid="isNonEmpty" data-error="*请输入" onkeyup="callText('nodePopularizeMode')" name="nodePopularizeMode"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <input type="button" value="返回" onClick="goBack()"></input>
+                    <input type="button" value="下一步"  onClick="subMit()"></input>
+                </div> 
+            </form>          
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	$('#yys').click(function(){
+		window.location.href = 'shenbao3.html';
+	})
+	$('#bsyys').click(function(){
+		window.location.href = 'shenbao3.html';
+	})
+    $(function(){
+    	var acc = document.getElementsByClassName("titleBtn");
+		var i;
+		for (i = 0; i < acc.length; i++) {
+		  acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + "px";
+		  acc[i].onclick = function() {
+		  	if($(this).next().validate('submitValidate')){
+		  		$(this).find('img').show();
+		  	}else{
+		  		$(this).find('img').hide();
+		  	}
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight){
+		      panel.style.maxHeight = null;
+		      $(this).find('span').text('展开 +');
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		      $(this).find('span').text('收起 -');
+		    } 
+		  }
+		}
+    })
+
+	//文本域字数监听
+	function callText(a){
+		var textLength = $('textarea[name='+a+']').val().length;
+		if(textLength>500){
+			textLength=500
+		}
+		$('textarea[name='+a+']').next().find('.textNum').text(textLength);
+	}
+	//console.log(recordId);
+
+    $('#popClose').click(function(){//关闭弹窗
+    	$(".popWrap").hide();
+    	$('body').css("height","");
+		$('body').css("overflow","scroll");
+	})
+
+   $('form').validate({
+        rules: {
+           
+        },
+        messages: {
+            
+        },
+        onFocus: function () {
+            this.parent().addClass('active');
+            return false;
+        },
+
+        onBlur: function () {
+            var $parent = this.parent();
+            var _status = parseInt(this.attr('data-status'));
+            $parent.removeClass('active');
+            if (!_status) {
+                $parent.addClass('error');
+            }
+            return false;
+        }
+	});
+	
+
+	// 提交逻辑
+	function subMit(){
+		if($('form').validate('submitValidate')){
+            $(".popWrap").show();
+            
+		}else{
+			var acc = document.getElementsByClassName("titleBtn");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+				acc[i].nextElementSibling.style.maxHeight = acc[i].nextElementSibling.scrollHeight + "px";
+			}
+			$('.titleBtn span').text('收起 -');
+			var oPosition = $('.error:first').offset().top;
+			$('html,body').animate({
+	      		scrollTop:oPosition
+	      	},10)
+		}
+	}	
+function goBack(){
+    window.location.href = 'shenbao1.html';          
+}
+</script>
+
+</body>
+
+</html>

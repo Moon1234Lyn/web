@@ -1,0 +1,111 @@
+.info1{
+    width: 1100px;
+    height: auto;
+    border: 1px solid #CBCBCB;
+    background-color: white;
+    opacity: 1;
+    border-radius: 5px;
+    margin: auto;
+}
+.step {
+    display: flex;
+    justify-content: space-around;
+    /* border: black 1px solid; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+}
+.data li:first-child{
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 30px;
+    background: #FFFFFF;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    opacity: 1;
+}
+.data:first-child:after{
+    content: '';
+    width: 317px;
+    height: 3px;
+    background-color: #CBCBCB;
+    position: absolute;
+    left: 355px;
+    top: 347px;
+}
+.data:nth-child(2):after{
+    content: '';
+    width: 349px;
+    height: 3px;
+    background-color: #CBCBCB;
+    position: absolute;
+    left: 706px;
+    top: 347px;
+}
+.infoForm{
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 60px;
+}
+.inputWrapper{
+    padding-left: 200px;
+    padding: auto;
+    text-align:left;
+    margin-bottom:30px;
+}
+.inputWrapper textarea{
+    margin-top:10px;
+    width:800px;
+    height:108px;
+    border:1px solid rgba(203,203,203,1);
+    opacity:1;
+    border-radius:3px;
+}
+.inputWrapper .dyname{
+    color:red;
+}
+.inputWrapper input{
+    width:800px;
+    height:36px;
+    margin-top:10px;
+    border:1px solid rgba(203,203,203,1);
+    opacity:1;
+    border-radius:3px;
+}
+.inputWrapper input:focus{
+    border:1px solid #0066CC;
+}
+.inputWrapper .valid_message {
+    float:right;
+    color: red;
+    font-size:14px;
+}
+.btn-wrap{
+    /* border: black 1px solid; */
+    width:300px;
+    margin:50px auto;
+    overflow: hidden;
+}
+.btn-wrap input:nth-of-type(1){
+    float:left;
+    background:rgba(13,57,130,1);
+}
+.btn-wrap input:nth-of-type(2){
+    float:right;
+    background:rgba(38,111,233,1);
+}
+.btn-wrap input{
+    width:120px;
+    height:30px;
+    border-radius :3px;
+    border: 0px;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+    color:#fff;
+}

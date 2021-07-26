@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申报企业基本信息</title>
+    <link rel="stylesheet" href="../css/shenbao3.css"/>
+    <link rel="stylesheet" href="../css/qydy1.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-validate.js"></script>
+</head>
+<body>
+    <div class="popWrap">
+        <div class="popCont">
+            <div class="popTitle">
+                <span id="popClose"></span>
+            </div>
+            <div class="popBody">
+                <img src="../img/qydysuccess.png">
+            </div>
+            <p class="popText">您的调研表我们已收到，感谢您的支持</p>
+            <div class="popBtn">
+                <button type="button" id="qd" onclick="closewin()">确定</button>
+            </div>
+        </div>
+    </div>
+<div class="box1">
+    <div class="banner1">
+        <div class="banner1-2">
+            <img class="logo1"></img>
+            <p class="logo-test">欢迎，中国信通院</p>
+        </div>
+    </div>
+    <div class="banner2"></div>
+    <div class="banner3"></div>
+    <div class="content">
+        
+        <div class="info1">
+            <ul class="step">
+                <ul class="data ">
+                    <li><img class="dui"></li>
+                    <li>申报企业基本信息</li>
+                </ul>
+                <ul class="data">
+                    <li><img class="dui"></li>
+                    <li>申报二级节点应用信息</li>
+                </ul>
+                <ul class="data action">
+                    <li>3</li>
+                    <li>5G+工业互联网应用</li>
+                </ul>
+            </ul>
+            
+            <form id="inforForm" name='inforForm' action='' method='post'>
+                <p class="titleBtn">
+                    基础网络建设<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>收起 -</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>目前工厂内网网络情况，内网改造计划或进展</span>
+                            <div class="areaBox">
+                                <textarea name="reformPlan" onkeyup="callText('reformPlan')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="titleBtn">
+                    5G+工业互联网应用情况<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>展开 +</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>所属行业、规模、应用特性</span>
+                            <div class="areaBox">
+                                <textarea name="applicationFeatures" onkeyup="callText('applicationFeatures')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>5G+工业互联网应用场景（如果现阶段未开展，那是否有较强需求的应用场景，是什么）</span>
+                            <div class="areaBox">
+                                <textarea name="useCase5g" onkeyup="callText('useCase5g')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>应用解决了哪些方面的问题？（可从接入、数据采集、生产控制如高清视屏类应用等角度描述）</span>
+                            <div class="areaBox">
+                                <textarea name="solveProblem" onkeyup="callText('solveProblem')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>应用规模、成效（将生产流程优化与内网建设改造相结合，推动5G网络部署应用从生产外围环节向生产内部环节延伸）</span>
+                            <div class="areaBox">
+                                <textarea name="applicationEffect" onkeyup="callText('applicationEffect')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>是否有“5G+工业互联网”园区网络发展计划，如何规划的？</span>
+                            <div class="areaBox">
+                                <textarea name="campusNetworkPlan" onkeyup="callText('campusNetworkPlan')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style='color:#444444'>对所处行业5G+工业互联网的市场预判</span>
+                            <div class="areaBox">
+                                <textarea name="marketAnticipation" onkeyup="callText('marketAnticipation')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="titleBtn">
+                    5G+工业互联网技术、产品和公共服务<img style="margin-left:5px" src="../img/titledui.png">
+                    <span>展开 +</span>
+                </p>
+                <div class="panelWrap">
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style="color:#707070;font-weight:900">技术能力：</span><span style='color:#444444'>配套的技术有哪些？技术攻关重点是什么？</span>
+                            <div class="areaBox">
+                                <textarea name="technicalSkills" onkeyup="callText('technicalSkills')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style="color:#707070;font-weight:900">产品能力：</span><span style='color:#444444'>5G+工业互联网”相关产品（如5G芯片和模组、网关，与其他先进技术融合的通信设备等）<br/>介绍包括产品描述、运用模式、目标客户、客户价值、收益模式等</span>
+                            <div class="areaBox">
+                                <textarea name="productCapability" onkeyup="callText('productCapability')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='inputWrapper'>
+                        <div class='dyname'>*
+                            <span style="color:#707070;font-weight:900">公共服务能力：</span><span style='color:#444444'>是否已有公共服务平台？能提供哪些 “5G+工业互联网”方面的公共服务 <br/>（如提供“5G+工业互联网”内网建设改造模板，应用咨询及研发培训等公共服务），或能提供什么通用解决方案？</span>
+                            <div class="areaBox">
+                                <textarea name="publicServiceCapability" onkeyup="callText('publicServiceCapability')" maxlength="500" class='required' data-valid="isNonEmpty" data-error="*请输入" placeholder="请输入（500字以内）"></textarea>
+                                <p class="textBox"><span class="textNum">0</span>/500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <input type="button" value="返回" onClick="goBack()"></input>
+                    <input type="button" value="提交" onClick="subMit()"></input>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function closewin(){
+        // window.opener=null;
+        // window.open('','_self');
+        // window.close();
+        if (navigator.userAgent.indexOf("MSIE") > 0) {
+              if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+                   window.opener = null;
+                   window.close();
+              } else {
+                   window.open('', '_top');
+                   window.top.close();
+              }
+         }else if (navigator.userAgent.indexOf("Firefox") > 0) {
+              window.location.href = 'about:blank ';
+         } else {
+              window.opener = null;
+              window.open('', '_self', '');
+              window.close();
+         }
+    }
+	
+   
+	//文本域字数监听
+	function callText(a){
+		var textLength = $('textarea[name='+a+']').val().length;
+		if(textLength>500){
+			textLength=500
+		}
+		$('textarea[name='+a+']').next().find('.textNum').text(textLength);
+	}
+    (function(){
+    	var acc = document.getElementsByClassName("titleBtn");
+		var i;
+		for (i = 0; i < acc.length; i++) {
+		  acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + "px";
+		  acc[i].onclick = function() {
+		  	//console.log($('form').validate('submitValidate'));
+		  	if($(this).next().validate('submitValidate')){
+		  		$(this).find('img').show();
+		  	}else{
+		  		$(this).find('img').hide();
+		  	}
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight){
+		      panel.style.maxHeight = null;
+		      $(this).find('span').text('展开 +');
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		      $(this).find('span').text('收起 -');
+		    } 
+		  }
+		}
+    })();
+    $('#popClose').click(function(){//关闭弹窗
+    	$(".popWrap").hide();
+    	$('body').css("height","");
+		$('body').css("overflow","scroll");
+	})
+    var recordId = -1;
+     $('form').validate({
+        rules: {
+           
+        },
+        messages: {
+            
+        },
+        onFocus: function () {
+            this.parent().addClass('active');
+            return false;
+        },
+
+        onBlur: function () {
+            var $parent = this.parent();
+            var _status = parseInt(this.attr('data-status'));
+            $parent.removeClass('active');
+            if (!_status) {
+                $parent.addClass('error');
+            }
+            return false;
+        }
+	});
+	//提交表单
+    function subMit(){
+		//console.log($('#inforForm').validate('submitValidate'));
+	     if($('form').validate('submitValidate')){  
+            $('.popWrap').show();
+         }			
+		else{
+			var acc = document.getElementsByClassName("titleBtn");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+				acc[i].nextElementSibling.style.maxHeight = acc[i].nextElementSibling.scrollHeight + "px";
+			}
+			$('.titleBtn span').text('收起 -');
+			var oPosition = $('.error:first').offset().top;
+			$('html,body').animate({
+	      		scrollTop:oPosition
+	      	},10)
+		}
+	}
+function goBack(){
+    window.location.href = 'shenbao2.html?type==2';         
+}
+</script>
+</html>

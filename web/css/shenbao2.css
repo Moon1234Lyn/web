@@ -1,0 +1,334 @@
+.info1{
+    width: 1200px;
+    height: auto;
+    border: 1px solid #CBCBCB;
+    background-color: white;
+    opacity: 1;
+    border-radius: 5px;
+    margin: auto;
+}
+.step {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    color: #444444;
+}
+.data li:first-child{
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 30px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    opacity: 1;
+}
+.data:first-child:after{
+    content: '';
+    width: 355px;
+    height: 3px;
+    background-color: #CBCBCB;
+    position: absolute;
+    left: 317px;
+    top: 347px;
+}
+.data:nth-child(2):after{
+    content: '';
+    width: 385px;
+    height: 3px;
+    background-color: #CBCBCB;
+    position: absolute;
+    left: 706px;
+    top: 347px;
+}
+.done{
+    color: #266FE9 !important;
+}
+.done:before {
+    background-image: url("../img/dui.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    content: '' !important;
+    border:none !important;
+}
+.grey {
+    color: #CBCBCB !important;
+}
+#inforForm{
+    width:1093px;
+    margin:0 auto;
+    padding: 10px;
+}
+.inputWrapper{
+    text-align:left;
+    margin-bottom:30px;
+}
+.inputWrapper textarea{
+    margin-top:10px;
+    width:100%;
+    height:108px;
+    border:1px solid rgba(203,203,203,1);
+    opacity:1;
+    border-radius:3px;
+    box-sizing: border-box;
+}
+.inputWrapper .dyname{
+    color:red;
+}
+.inputWrapper input{
+    width:400px;
+    height:36px;
+    padding-left:12px;
+    /*background:rgba(232,232,232,1);*/
+    margin-top:10px;
+    border:1px solid rgba(203,203,203,1);
+    opacity:1;
+    border-radius:3px;
+}
+.inputWrapper input:focus{
+    border:1px solid #0066CC;
+}
+.inputWrapper .valid_message {
+    float:right;
+    color: red;
+    font-size:16px;
+}
+input[type='checkbox']{
+    width:16px;
+    height:16px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border:1px solid rgba(38,111,233,1);
+    border-radius: 2px;
+    outline:none;
+    cursor:pointer;
+}
+input[type='checkbox']:checked{
+    background:url('../img/selected.png') no-repeat center;
+}
+input[type='radio']{
+    width:16px;
+    height:16px;
+    -webkit-appearance:none;
+    background:url('../img/radio.png') no-repeat center;
+    outline:none;
+    cursor:pointer;
+}
+input[type='radio']:checked{
+    background:url('../img/radioActive.png') no-repeat center;
+    border:none;
+}
+
+.labelBox label:nth-last-child{
+    margin:0;
+}
+.labelBox label{
+    display:inline-block;
+}
+.yyms label{
+    min-width:166px;
+    margin-right:46px;
+}
+label{
+    min-width:86px;
+    cursor:pointer;
+    margin-right:60px;
+}
+label input{
+    margin-bottom:-2px;
+    margin-right:6px;
+}
+.inputWrapper .qtInpt{
+    width:310px;
+    height:30px;
+}
+.titleBtn{
+    height:48px;
+    line-height:48px;
+    padding:0 8px;
+    color:#fff;
+    background:rgba(13,57,130,1);
+    border-left:8px solid rgba(98,150,236,1);
+    margin-bottom:30px;
+    cursor:pointer;
+}
+.panelWrap{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.titleBtn span{
+    float:right;
+    font-size:14px;
+}
+.areaBox textarea{
+    width:100%;
+    height:108px;
+    margin-top:10px;
+}
+.radioBox label{color:#444;min-width:86px;display:inline-block;}
+
+.inuptGroup{
+    display:flex;
+    justify-content:space-between;
+}
+.inuptGroup input{
+    width:340px;
+}
+.popWrap{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:99;
+    background:rgba(0,0,0,0.5);
+    display:none;
+}
+.popCont{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:480px;
+    height:240px;
+    background-color:#fff;
+    border-radius:10px;
+}
+.popTitle{
+    height:48px;
+    background:rgba(13,57,130,1);
+    border-radius:10px 10px 0 0;
+}
+.popTitle span{
+    float:right;
+    width:16px;
+    height:16px;
+    margin-right:20px;
+    margin-top:15px;
+    color:#fff;
+    cursor:pointer;
+}
+.popTitle span::before{
+    content: "\2716";
+}
+.popBody{
+    height:125px;
+    line-height:125px;
+    text-align:center;
+    font-size:20px;
+    font-family:Microsoft YaHei UI;
+    font-weight:bold;
+    color:rgba(68,68,68,1);
+}
+.popBtn{
+    text-align:center;
+}
+.popBtn button:nth-of-type(1){
+    width:120px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    background:rgba(38,111,233,1);
+    border:none;
+    border-radius:5px;
+    color:#fff;
+    outline:none;
+    cursor:pointer;
+}
+.popBtn button:nth-of-type(2){
+    width:120px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    background:rgba(13,57,130,1);
+    border:none;
+    border-radius:5px;
+    margin-left:40px;
+    color:#fff;
+    outline:none;
+    cursor:pointer;
+}
+.inuptGroup .valid_message{
+    display:none;
+}
+span.error input{
+    border:1px solid red;
+}
+.titleBtn img{
+    display:none;
+}
+.popWrap1{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:99;
+    background:rgba(0,0,0,0.5);
+    display:none;
+}
+.popCont1{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:480px;
+    height:240px;
+    background-color:#fff;
+    border-radius:10px;
+}
+.popTitle1{
+    height:48px;
+    background:rgba(13,57,130,1);
+    border-radius:10px 10px 0 0;
+}
+.popTitle1 span{
+    float:right;
+    width:16px;
+    height:16px;
+    margin-right:20px;
+    margin-top:15px;
+    color:#fff;
+    cursor:pointer;
+}
+.popTitle1 span::before{
+    content: "\2716";
+}
+.popBody1{
+    height:125px;
+    line-height:125px;
+    text-align:center;
+    font-size:20px;
+    font-family:Microsoft YaHei UI;
+    font-weight:bold;
+    color:rgba(68,68,68,1);
+}
+.popBtn1{
+    text-align:center;
+}
+.popBtn1 button:nth-of-type(1){
+    width:120px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    background:rgba(38,111,233,1);
+    border:none;
+    border-radius:5px;
+    color:#fff;
+    outline:none;
+    cursor:pointer;
+}
+.textBox{
+    /*float:right;*/
+    width:100%;
+    text-align:right;
+    color:#666;
+}
+.for_warpper{
+    line-height: 20px;
+}

@@ -1,0 +1,140 @@
+.box1{
+    width: 1440px;
+    height: auto;
+    opacity: 1;
+}
+.banner1{
+    width: 800px;
+    height: 87.5px;
+    opacity: 1;
+    margin-left: 320px;
+}
+.banner1-2{
+    width: 760px;
+    height: 65px;
+    opacity: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logo1{
+    background-image: url("../img/logo.png");
+    width:254px;
+    height : 55px;
+    border-style: hidden;
+}
+.logo-test{
+    font-size: 16px;
+    font-weight: 400;
+    color: #707070;
+    opacity: 1;
+}
+.banner2{
+    width: auto;
+    height: 35px;
+    background: #0D3982;
+    opacity: 1;
+}
+.banner3{
+    background-image: url("../img/qiye.png");
+    width:100%;
+    height : 133px;
+    background-size: cover;
+}
+.content{
+    height: auto;
+    background-color: #F0F7FC;
+    padding-top: 35px;
+    padding-bottom: 80px;
+}
+.info{
+    width: 800px;
+    height: 300px;
+    border: 1px solid #CBCBCB;
+    background-color: white;
+    opacity: 1;
+    border-radius: 5px;
+    margin-left: 300px;
+}
+.intro{
+    width: auto;
+    height: 26px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 46px;
+    color: #707070;
+    opacity: 1;
+    margin-left: 53px;
+    margin-top: 49px;
+}
+.btn1{
+    width: 200px;
+    height: 40px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-size: 20px;
+    background: #0D3982;
+    border-radius: 5px;
+    margin-left: 450px;
+    margin-top: 25px;
+    margin-bottom: 200px;
+    border: 0px; 
+}
+.btn2{
+    width: 200px;
+    height: 40px;
+    background: #266FE9;
+    border-radius: 5px;
+    margin-left: 50px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: 0px;
+}
+.btn-wrap{
+    width: 350px;
+    margin:20px auto;
+    overflow: hidden;
+}
+.btn-wrap input:nth-of-type(1){
+    float:left;
+    background:rgba(13,57,130,1);
+}
+.btn-wrap input:nth-of-type(2){
+    float:right;
+    background:rgba(38,111,233,1);
+}
+.btn-wrap input{
+    width:150px;
+    height:30px;
+    opacity:1;
+    border-radius:5px;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+    color:#fff;
+    border: 0px;
+}
+.dui{
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/dui.png");
+    background-size: cover;
+    border: 0px !important;
+}
+.action li:first-child{
+    border: 2px solid #444444 !important;
+    color: #444444 !important;
+}
+.presentation li:first-child{
+    border: 2px solid #CBCBCB !important;
+    color: #CBCBCB !important;
+}
+.done {
+    color: #266FE9 !important;
+}
